@@ -1,0 +1,423 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix dbc: <http://dbpedia.org/resource/Category:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wil: <http://example.com/jumlahdanrasiodokterperawatterhadappuskesmas2015#> .
+
+#class
+	wil:wilayah a rdfs:class .
+	wil:kesehatanTahun a rdfs:class .
+
+#type from class
+	wil:aceh a wil:wilayah .
+	wil:sumateraUtara a wil:wilayah .
+	wil:sumateraBarat a wil:wilayah .
+	wil:riau a wil:wilayah .
+	wil:jambi a wil:wilayah .
+	wil:sumateraSelatan a wil:wilayah .
+	wil:bengkulu a wil:wilayah .
+	wil:lampung a wil:wilayah .
+	wil:bangkaBelitung a wil:wilayah .
+	wil:kepulauanRiau a wil:wilayah .
+	wil:jakarta a wil:wilayah .
+	wil:jawaBarat a wil:wilayah .
+	wil:jawaTengah a wil:wilayah .
+	wil:yogyakarta a wil:wilayah .
+	wil:jawaTimur a wil:wilayah .
+	wil:banten a wil:wilayah .
+	wil:bali a wil:wilayah .
+	wil:nusaTenggaraBarat a wil:wilayah .
+	wil:nusaTenggaraTimur a wil:wilayah .
+	wil:kalimantanBarat a wil:wilayah .
+	wil:kalimantanTengah a wil:wilayah .
+	wil:kalimantanSelatan a wil:wilayah .
+	wil:kalimantanTimur a wil:wilayah .
+	wil:kalimantanUtara a wil:wilayah .
+	wil:sulawesiUtara a wil:wilayah .
+	wil:sulawesiTengah a wil:wilayah .
+	wil:sulawesiSelatan a wil:wilayah .
+	wil:sulawesiTenggara a wil:wilayah .
+	wil:gorontalo a wil:wilayah .
+	wil:sulawesiBarat a wil:wilayah .
+	wil:maluku a wil:wilayah .
+	wil:malukuUtara a wil:wilayah .
+	wil:papuaBarat a wil:wilayah .
+	wil:papua a wil:wilayah .
+
+#sameAs
+	wil:aceh owl:sameAs dbr:Aceh .
+	wil:sumateraUtara owl:sameAs dbr:North_Sumatra .
+	wil:sumateraBarat owl:sameAs dbr:West_Sumatra .
+	wil:riau owl:sameAs dbr:Riau .
+	wil:jambi owl:sameAs dbr:Jambi .
+	wil:sumateraSelatan owl:sameAs dbr:South_Sumatra .
+	wil:bengkulu owl:sameAs dbr:Bengkulu .
+	wil:lampung owl:sameAs dbr:Lampung .
+	wil:bangkaBelitung owl:sameAs dbr:Bangka-Belitung_Islands .
+	wil:kepulauanRiau owl:sameAs dbr:Riau_Islands .
+	wil:jakarta owl:sameAs dbr:Jakarta .
+	wil:jawaBarat owl:sameAs dbr:West_Java .
+	wil:jawaTengah owl:sameAs dbr:Central_Java .
+	wil:yogyakarta owl:sameAs dbr:Special_Region_of_Yogyakarta .
+	wil:jawaTimur owl:sameAs dbr:East_Java .
+	wil:banten owl:sameAs dbr:Banten .
+	wil:bali owl:sameAs dbr:Bali .
+	wil:nusaTenggaraBarat owl:sameAs dbr:West_Nusa_Tenggara .
+	wil:nusaTenggaraTimur owl:sameAs dbr:East_Nusa_Tenggara .
+	wil:kalimantanBarat owl:sameAs dbr:West_Kalimantan .
+	wil:kalimantanTengah owl:sameAs dbr:Central_Kalimantan .
+	wil:kalimantanSelatan owl:sameAs dbr:South_Kalimantan .
+	wil:kalimantanTimur owl:sameAs dbr:East_Kalimantan .
+	wil:kalimantanUtara owl:sameAs dbr:North_Kalimantan .
+	wil:sulawesiUtara owl:sameAs dbr:North_Sulawesi .
+	wil:sulawesiTengah owl:sameAs dbr:Central_Sulawesi .
+	wil:sulawesiSelatan owl:sameAs dbr:South_Sulawesi .
+	wil:sulawesiTenggara owl:sameAs dbr:Southeast_Sulawesi .
+	wil:gorontalo owl:sameAs dbr:Gorontalo .
+	wil:sulawesiBarat owl:sameAs dbr:West_Sulawesi .
+	wil:maluku owl:sameAs <http://dbpedia.org/resource/Maluku_(province)> .
+	wil:malukuUtara owl:sameAs dbr:North_Maluku .
+	wil:papuaBarat owl:sameAs <http://dbpedia.org/resource/West_Papua_(province)> .
+	wil:papua owl:sameAs <http://dbpedia.org/resource/Papua_(province)> .
+
+#property
+	wil:id a rdf:Property .
+	wil:id rdfs:domain wil:wilayah .
+	wil:id rdfs:range xsd:nonNegativeInteger .
+
+	wil:label a rdf:Property .
+	wil:label rdfs:domain wil:wilayah .
+	wil:label rdfs:range xsd:String .
+
+	wil:jumlah_puskesmas a rdf:Property .
+	wil:jumlah_puskesmas rdfs:domain wil:kesehatanTahun .
+	wil:jumlah_puskesmas rdfs:range xsd:nonNegativeInteger .
+
+	wil:dokter_gigi_puskesmas a rdf:Property .
+	wil:dokter_gigi_puskesmas rdfs:domain wil:kesehatanTahun .
+	wil:dokter_gigi_puskesmas rdfs:range xsd:nonNegativeInteger .
+	
+	wil:dokter_umum_puskesmas a rdf:Property .
+	wil:dokter_umum_puskesmas rdfs:domain wil:kesehatanTahun .
+	wil:dokter_umum_puskesmas rdfs:range xsd:nonNegativeInteger .
+
+	wil:perawat_puskesmas a rdf:Property .
+	wil:perawat_puskesmas rdfs:domain wil:kesehatanTahun .
+	wil:perawat_puskesmas rdfs:range xsd:nonNegativeInteger .
+
+	wil:bidan_puskesmas a rdf:Property .
+	wil:bidan_puskesmas rdfs:domain wil:kesehatanTahun .
+	wil:bidan_puskesmas rdfs:range xsd:nonNegativeInteger .
+
+#instance
+	wil:aceh
+	    wil:id 1100;
+	    wil:label "Aceh"@id;
+	    wil:jumlah_puskesmas 339;
+	    wil:dokter_umum_puskesmas 762;
+	    wil:dokter_gigi_puskesmas 156;
+	    wil:perawat_puskesmas 3201;
+	    wil:bidan_puskesmas 4509 .
+
+	wil:sumateraUtara
+	    wil:id 1200;
+	    wil:label "Sumatera Utara"@id;
+	    wil:jumlah_puskesmas 571;
+	    wil:dokter_umum_puskesmas 1419;
+	    wil:dokter_gigi_puskesmas 523;
+	    wil:perawat_puskesmas 3602;
+	    wil:bidan_puskesmas 7154 .
+
+	wil:sumateraBarat
+	    wil:id 1300;
+	    wil:label "Sumatera Barat"@id;
+	    wil:jumlah_puskesmas 264;
+	    wil:dokter_umum_puskesmas 424;
+	    wil:dokter_gigi_puskesmas 266;
+	    wil:perawat_puskesmas 1998;
+	    wil:bidan_puskesmas 3527 .
+
+	wil:riau
+	    wil:id 1400;
+	    wil:label "Riau"@id;
+	    wil:jumlah_puskesmas 212;
+	    wil:dokter_umum_puskesmas 482;
+	    wil:dokter_gigi_puskesmas 207;
+	    wil:perawat_puskesmas 2821;
+	    wil:bidan_puskesmas 3279 .
+
+	wil:jambi
+	    wil:id 1500;
+	    wil:label "Jambi"@id;
+	    wil:jumlah_puskesmas 176;
+	    wil:dokter_umum_puskesmas 302;
+	    wil:dokter_gigi_puskesmas 110;
+	    wil:perawat_puskesmas 1639;
+	    wil:bidan_puskesmas 1843 .
+
+	wil:sumateraSelatan
+	    wil:id 1600;
+	    wil:label "Sumatera Selatan"@id;
+	    wil:jumlah_puskesmas 322;
+	    wil:dokter_umum_puskesmas 441;
+	    wil:dokter_gigi_puskesmas 116;
+	    wil:perawat_puskesmas 4145;
+	    wil:bidan_puskesmas 4939 .
+
+	wil:bengkulu
+	    wil:id 1700;
+	    wil:label "Bengkulu"@id;
+	    wil:jumlah_puskesmas 180;
+	    wil:dokter_umum_puskesmas 192;
+	    wil:dokter_gigi_puskesmas 57;
+	    wil:perawat_puskesmas 1522;
+	    wil:bidan_puskesmas 2070 .
+
+	wil:lampung
+	    wil:id 1800;
+	    wil:label "Lampung"@id;
+	    wil:jumlah_puskesmas 291;
+	    wil:dokter_umum_puskesmas 507;
+	    wil:dokter_gigi_puskesmas 191;
+	    wil:perawat_puskesmas 1768;
+	    wil:bidan_puskesmas 1655 .
+
+	wil:bangkaBelitung
+	    wil:id 1900;
+	    wil:label "Kep. Bangka Belitung"@id;
+	    wil:jumlah_puskesmas 62;
+	    wil:dokter_umum_puskesmas 132;
+	    wil:dokter_gigi_puskesmas 45;
+	    wil:perawat_puskesmas 762;
+	    wil:bidan_puskesmas 493 .
+
+	wil:kepulauanRiau
+	    wil:id 2100;
+	    wil:label "Kepulauan Riau"@id;
+	    wil:jumlah_puskesmas 72;
+	    wil:dokter_umum_puskesmas 317;
+	    wil:dokter_gigi_puskesmas 95;
+	    wil:perawat_puskesmas 869;
+	    wil:bidan_puskesmas 621 .
+
+	wil:jakarta
+	    wil:id 3100;
+	    wil:label "DKI Jakarta"@id;
+	    wil:jumlah_puskesmas 340;
+	    wil:dokter_umum_puskesmas 767;
+	    wil:dokter_gigi_puskesmas 425;
+	    wil:perawat_puskesmas 1024;
+	    wil:bidan_puskesmas 905 .
+
+	wil:jawaBarat
+	    wil:id 3200;
+	    wil:label "Jawa Barat"@id;
+	    wil:jumlah_puskesmas 1050;
+	    wil:dokter_umum_puskesmas 1880;
+	    wil:dokter_gigi_puskesmas 801;
+	    wil:perawat_puskesmas 5565;
+	    wil:bidan_puskesmas 6607 .
+
+	wil:jawaTengah
+	    wil:id 3300;
+	    wil:label "Jawa Tengah"@id;
+	    wil:jumlah_puskesmas 875;
+	    wil:dokter_umum_puskesmas 1859;
+	    wil:dokter_gigi_puskesmas 714;
+	    wil:perawat_puskesmas 5915;
+	    wil:bidan_puskesmas 8931 .
+
+	wil:yogyakarta
+	    wil:id 3400;
+	    wil:label "DI Yogyakarta"@id;
+	    wil:jumlah_puskesmas 121;
+	    wil:dokter_umum_puskesmas 365;
+	    wil:dokter_gigi_puskesmas 177;
+	    wil:perawat_puskesmas 658;
+	    wil:bidan_puskesmas 516 .
+
+	wil:jawaTimur
+	    wil:id 3500;
+	    wil:label "Jawa Timur"@id;
+	    wil:jumlah_puskesmas 960;
+	    wil:dokter_umum_puskesmas 1667;
+	    wil:dokter_gigi_puskesmas 883;
+	    wil:perawat_puskesmas 8889;
+	    wil:bidan_puskesmas 10889 .
+
+	wil:banten
+	    wil:id 3600;
+	    wil:label "Banten"@id;
+	    wil:jumlah_puskesmas 233;
+	    wil:dokter_umum_puskesmas 358;
+	    wil:dokter_gigi_puskesmas 189;
+	    wil:perawat_puskesmas 1891;
+	    wil:bidan_puskesmas 3772 .
+
+	wil:bali
+	    wil:id 5100;
+	    wil:label "Bali"@id;
+	    wil:jumlah_puskesmas 120;
+	    wil:dokter_umum_puskesmas 320;
+	    wil:dokter_gigi_puskesmas 170;
+	    wil:perawat_puskesmas 659;
+	    wil:bidan_puskesmas 765 .
+
+	wil:nusaTenggaraBarat
+	    wil:id 5200;
+	    wil:label "Nusa Tenggara Barat"@id;
+	    wil:jumlah_puskesmas 158;
+	    wil:dokter_umum_puskesmas 203;
+	    wil:dokter_gigi_puskesmas 83;
+	    wil:perawat_puskesmas 1828;
+	    wil:bidan_puskesmas 1308 .
+
+	wil:nusaTenggaraTimur
+	    wil:id 5300;
+	    wil:label "Nusa Tenggara Timur"@id;
+	    wil:jumlah_puskesmas 371;
+	    wil:dokter_umum_puskesmas 315;
+	    wil:dokter_gigi_puskesmas 97;
+	    wil:perawat_puskesmas 2496;
+	    wil:bidan_puskesmas 1264 .
+
+	wil:kalimantanBarat
+	    wil:id 6100;
+	    wil:label "Kalimantan Barat"@id;
+	    wil:jumlah_puskesmas 238;
+	    wil:dokter_umum_puskesmas 324;
+	    wil:dokter_gigi_puskesmas 80;
+	    wil:perawat_puskesmas 2006;
+	    wil:bidan_puskesmas 1468 .
+
+	wil:kalimantanTengah
+	    wil:id 6200;
+	    wil:label "Kalimantan Tengah"@id;
+	    wil:jumlah_puskesmas 195;
+	    wil:dokter_umum_puskesmas 283;
+	    wil:dokter_gigi_puskesmas 57;
+	    wil:perawat_puskesmas 1945;
+	    wil:bidan_puskesmas 1009 .
+
+	wil:kalimantanSelatan
+	    wil:id 6300;
+	    wil:label "Kalimantan Selatan"@id;
+	    wil:jumlah_puskesmas 230;
+	    wil:dokter_umum_puskesmas 353;
+	    wil:dokter_gigi_puskesmas 111;
+	    wil:perawat_puskesmas 1568;
+	    wil:bidan_puskesmas 1343 .
+
+	wil:kalimantanTimur
+	    wil:id 6400;
+	    wil:label "Kalimantan Timur"@id;
+	    wil:jumlah_puskesmas 174;
+	    wil:dokter_umum_puskesmas 367;
+	    wil:dokter_gigi_puskesmas 162;
+	    wil:perawat_puskesmas 1938;
+	    wil:bidan_puskesmas 1406 .
+
+	wil:kalimantanUtara
+	    wil:id 6500;
+	    wil:label "Kalimantan Utara"@id;
+	    wil:jumlah_puskesmas 49;
+	    wil:dokter_umum_puskesmas 126;
+	    wil:dokter_gigi_puskesmas 38;
+	    wil:perawat_puskesmas 618;
+	    wil:bidan_puskesmas 324 .
+
+	wil:sulawesiUtara
+	    wil:id 7100;
+	    wil:label "Sulawesi Utara"@id;
+	    wil:jumlah_puskesmas 187;
+	    wil:dokter_umum_puskesmas 459;
+	    wil:dokter_gigi_puskesmas 27;
+	    wil:perawat_puskesmas 1310;
+	    wil:bidan_puskesmas 517 .
+
+	wil:sulawesiTengah
+	    wil:id 7200;
+	    wil:label "Sulawesi Tengah"@id;
+	    wil:jumlah_puskesmas 189;
+	    wil:dokter_umum_puskesmas 241;
+	    wil:dokter_gigi_puskesmas 62;
+	    wil:perawat_puskesmas 1330;
+	    wil:bidan_puskesmas 675 .
+
+	wil:sulawesiSelatan
+	    wil:id 7300;
+	    wil:label "Sulawesi Selatan"@id;
+	    wil:jumlah_puskesmas 448;
+	    wil:dokter_umum_puskesmas 625;
+	    wil:dokter_gigi_puskesmas 378;
+	    wil:perawat_puskesmas 3626;
+	    wil:bidan_puskesmas 3153 .
+
+	wil:sulawesiTenggara
+	    wil:id 7400;
+	    wil:label "Sulawesi Tenggara"@id;
+	    wil:jumlah_puskesmas 269;
+	    wil:dokter_umum_puskesmas 244;
+	    wil:dokter_gigi_puskesmas 67;
+	    wil:perawat_puskesmas 1469;
+	    wil:bidan_puskesmas 698 .
+
+	wil:gorontalo
+	    wil:id 7500;
+	    wil:label "Gorontalo"@id;
+	    wil:jumlah_puskesmas 93;
+	    wil:dokter_umum_puskesmas 109;
+	    wil:dokter_gigi_puskesmas 25;
+	    wil:perawat_puskesmas 570;
+	    wil:bidan_puskesmas 522 .
+
+	wil:sulawesiBarat
+	    wil:id 7600;
+	    wil:label "Sulawesi Barat"@id;
+	    wil:jumlah_puskesmas 94;
+	    wil:dokter_umum_puskesmas 82;
+	    wil:dokter_gigi_puskesmas 49;
+	    wil:perawat_puskesmas 805;
+	    wil:bidan_puskesmas 805 .
+
+	wil:maluku
+	    wil:id 8100;
+	    wil:label "Maluku"@id;
+	    wil:jumlah_puskesmas 199;
+	    wil:dokter_umum_puskesmas 151;
+	    wil:dokter_gigi_puskesmas 60;
+	    wil:perawat_puskesmas 1450;
+	    wil:bidan_puskesmas 504 .
+
+	wil:malukuUtara
+	    wil:id 8200;
+	    wil:label "Maluku Utara"@id;
+	    wil:jumlah_puskesmas 127;
+	    wil:dokter_umum_puskesmas 150;
+	    wil:dokter_gigi_puskesmas 36;
+	    wil:perawat_puskesmas 888;
+	    wil:bidan_puskesmas 1014 .
+
+	wil:papuaBarat
+	    wil:id 9100;
+	    wil:label "Papua Barat"@id;
+	    wil:jumlah_puskesmas 151;
+	    wil:dokter_umum_puskesmas 79;
+	    wil:dokter_gigi_puskesmas 18;
+	    wil:perawat_puskesmas 650;
+	    wil:bidan_puskesmas 223 .
+
+	wil:papua
+	    wil:id 9400;
+	    wil:label "Papua"@id;
+	    wil:jumlah_puskesmas 394;
+	    wil:dokter_umum_puskesmas 351;
+	    wil:dokter_gigi_puskesmas 62;
+	    wil:perawat_puskesmas 1886;
+	    wil:bidan_puskesmas 606 .
+
